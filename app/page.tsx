@@ -12,11 +12,8 @@ export default function Home() {
     <div className="min-h-screen flex flex-col bg-background text-foreground">
       <header className="sticky top-0 z-50 backdrop-blur supports-[backdrop-filter]:bg-background/70 border-b border-border">
         <div className="mx-auto w-full max-w-7xl px-6 py-4 flex items-center justify-between">
-          <Link href="/" className="flex items-center gap-2">
-            <div className="h-8 w-8 rounded-lg bg-primary/15 ring-1 ring-primary/30 grid place-items-center">
-              <span className="text-primary text-xs font-semibold">SaaS</span>
-            </div>
-            <span className="text-4xl font-semibold tracking-tight">inuzu</span>
+          <Link href="/" className="flex items-center">
+            <span className="text-4xl font-extrabold tracking-tight bg-gradient-to-r from-primary via-foreground to-accent bg-clip-text text-transparent">inuzu</span>
           </Link>
           <nav className="hidden md:flex items-center gap-8 text-sm">
             <Link href="/about" className="hover:text-primary transition-colors">About</Link>
@@ -48,6 +45,12 @@ export default function Home() {
               <p className="mt-6 text-lg sm:text-xl text-muted-foreground leading-relaxed max-w-2xl mx-auto">
                 We transform businesses through intelligent software solutions that combine cutting-edge technology with deep industry expertise.
               </p>
+              <ul className="mx-auto mt-6 max-w-3xl grid grid-cols-1 sm:grid-cols-2 gap-2 text-sm text-muted-foreground text-left">
+                <li>✓ Custom B2B & B2C dashboard development</li>
+                <li>✓ AI-driven workflow automation solutions</li>
+                <li>✓ Enterprise-grade web applications</li>
+                <li>✓ Industry-specific software solutions</li>
+              </ul>
             </div>
             <BentoGrid className="mb-20 grid-cols-1 md:grid-cols-2">
               <BentoGridItem
@@ -238,84 +241,7 @@ export default function Home() {
           </div>
         </section>
 
-        {/* About Section */}
-        <section className="py-16 md:py-20">
-          <div className="mx-auto max-w-6xl px-6">
-            <div className="mx-auto max-w-3xl text-center">
-              <h2 className="text-2xl sm:text-3xl font-semibold tracking-tight">Leading Software Development Company Delivering Innovation</h2>
-              <p className="mt-4 text-muted-foreground">
-                We build powerful digital solutions that transform how businesses operate—combining cutting‑edge technology with deep industry knowledge to drive growth and efficiency.
-              </p>
-              <div className="mt-6 grid grid-cols-2 sm:grid-cols-4 gap-4 text-sm text-muted-foreground">
-                <div><span className="text-foreground font-semibold">[X]+</span> Projects</div>
-                <div><span className="text-foreground font-semibold">[X]+</span> Years</div>
-                <div><span className="text-foreground font-semibold">[X]+</span> Industries</div>
-                <div><span className="text-foreground font-semibold">[X]%</span> Satisfaction</div>
-              </div>
-            </div>
-          </div>
-        </section>
 
-        {/* Services (concise summary; detailed bullets already in bento) */}
-        <section className="py-12">
-          <div className="mx-auto max-w-6xl px-6 grid md:grid-cols-3 gap-6 text-sm text-muted-foreground">
-            <div>
-              <h3 className="text-foreground font-medium">Custom Dashboard Development</h3>
-              <p className="mt-2">Real‑time analytics, automated reporting, and intuitive visualization for better decisions.</p>
-            </div>
-            <div>
-              <h3 className="text-foreground font-medium">AI‑Powered Automation</h3>
-              <p className="mt-2">RPA, ML, NLP, and computer vision to eliminate manual work and accelerate productivity.</p>
-            </div>
-            <div>
-              <h3 className="text-foreground font-medium">Web & Application Development</h3>
-              <p className="mt-2">Responsive PWAs, CMS, and e‑commerce—fast, secure, and SEO‑optimized.</p>
-            </div>
-          </div>
-        </section>
-
-        {/* Process Section */}
-        <section className="py-16 md:py-20 border-t border-border">
-          <div className="mx-auto max-w-6xl px-6">
-            <h2 className="text-2xl sm:text-3xl font-semibold tracking-tight text-center">Our Proven Software Development Process</h2>
-            <div className="mt-10 grid md:grid-cols-5 gap-4 text-sm">
-              {["Discovery & Strategy","Design & Architecture","Agile Development","Testing & QA","Deployment & Support"].map((title, idx) => (
-                <div key={title} className="rounded-xl border border-border bg-card p-4">
-                  <div className="text-foreground font-medium">{idx+1}. {title}</div>
-                  <p className="mt-2 text-muted-foreground">
-                    {idx===0 && "We analyze requirements, systems, and goals to shape a clear roadmap."}
-                    {idx===1 && "User‑centered interfaces and scalable architecture for performance."}
-                    {idx===2 && "Iterative sprints, transparent communication, and rapid feedback."}
-                    {idx===3 && "Comprehensive testing for reliability, security, and performance."}
-                    {idx===4 && "Seamless launch with ongoing support to ensure continued value."}
-                  </p>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* Social Proof */}
-        <section className="py-16 md:py-20">
-          <div className="mx-auto max-w-6xl px-6 grid md:grid-cols-2 gap-6">
-            <GlowBorder className="rounded-2xl" radius="1rem" borderWidth={1}>
-              <div className="p-6 rounded-[calc(1rem-1px)]">
-                <blockquote className="text-lg font-medium leading-relaxed">
-                  “They transformed our operations with custom dashboards—efficiency up 40% and better decisions across the org.”
-                </blockquote>
-                <p className="mt-3 text-sm text-muted-foreground">— [Client Name], [Title], [Company]</p>
-              </div>
-            </GlowBorder>
-            <GlowBorder className="rounded-2xl" radius="1rem" borderWidth={1}>
-              <div className="p-6 rounded-[calc(1rem-1px)]">
-                <blockquote className="text-lg font-medium leading-relaxed">
-                  “Their AI automation eliminated hours of manual work daily. The solution fits our industry needs perfectly.”
-                </blockquote>
-                <p className="mt-3 text-sm text-muted-foreground">— [Client Name], [Title], [Company]</p>
-              </div>
-            </GlowBorder>
-          </div>
-        </section>
 
         {/* CTA Section */}
         <section className="py-16 md:py-20 border-t border-border">
