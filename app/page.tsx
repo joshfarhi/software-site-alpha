@@ -6,6 +6,7 @@ import WobbleCard from "./components/WobbleCard";
 import ThreeDMarquee from "./components/ThreeDMarquee";
 import { BentoGrid, BentoGridItem } from "@/components/ui/bento-grid";
 import GlowBorder from "./components/GlowBorder";
+import { BarChart3, Rocket, Bot, Factory, HeartPulse, Landmark, Briefcase, ShoppingCart, Truck } from "lucide-react";
 
 export default function Home() {
   return (
@@ -45,12 +46,6 @@ export default function Home() {
               <p className="mt-6 text-lg sm:text-xl text-muted-foreground leading-relaxed max-w-2xl mx-auto">
                 We transform businesses through intelligent software solutions that combine cutting-edge technology with deep industry expertise.
               </p>
-              <ul className="mx-auto mt-6 max-w-3xl grid grid-cols-1 sm:grid-cols-2 gap-2 text-sm text-muted-foreground text-left">
-                <li>✓ Custom B2B & B2C dashboard development</li>
-                <li>✓ AI-driven workflow automation solutions</li>
-                <li>✓ Enterprise-grade web applications</li>
-                <li>✓ Industry-specific software solutions</li>
-              </ul>
             </div>
             <BentoGrid className="mb-20 grid-cols-1 md:grid-cols-2">
               <BentoGridItem
@@ -65,7 +60,7 @@ export default function Home() {
                     Real-time analytics platforms that transform complex data into actionable insights, empowering data-driven decision making across your organization.
                   </span>
                 }
-                icon={<span className="text-2xl">📊</span>}
+                icon={<BarChart3 className="w-8 h-8 text-white" />}
               />
 
               <BentoGridItem
@@ -80,7 +75,7 @@ export default function Home() {
                     Progressive Web Apps and e-commerce solutions built with cutting-edge technologies, delivering exceptional user experiences and measurable business results.
                   </span>
                 }
-                icon={<span className="text-2xl">🚀</span>}
+                icon={<Rocket className="w-8 h-8 text-white" />}
               />
 
               <BentoGridItem
@@ -95,7 +90,7 @@ export default function Home() {
                     Intelligent workflow automation using machine learning, RPA, and advanced AI to eliminate manual processes and accelerate operational efficiency.
                   </span>
                 }
-                icon={<span className="text-2xl">🤖</span>}
+                icon={<Bot className="w-8 h-8 text-white" />}
               />
 
               <BentoGridItem
@@ -110,7 +105,7 @@ export default function Home() {
                     Tailored software solutions designed for healthcare, finance, manufacturing, logistics, and professional services—built with deep industry knowledge and compliance requirements.
                   </span>
                 }
-                icon={<span className="text-2xl">🏭</span>}
+                icon={<Factory className="w-8 h-8 text-white" />}
               />
             </BentoGrid>
             {/* Industry Expertise */}
@@ -131,37 +126,37 @@ export default function Home() {
                   {[
                     {
                       name: "Healthcare",
-                      icon: "🏥",
+                      icon: <HeartPulse className="w-6 h-6 text-white" />,
                       description: "Patient management, clinical workflows, telemedicine platforms, and compliance automation for healthcare providers.",
                       features: ["HIPAA-compliant systems", "Clinical decision support", "Patient portal solutions"]
                     },
                     {
                       name: "Financial Services",
-                      icon: "🏦",
+                      icon: <Landmark className="w-6 h-6 text-white" />,
                       description: "Trading platforms, risk management tools, regulatory compliance systems, and secure financial applications.",
                       features: ["Real-time risk monitoring", "Regulatory reporting", "Secure transaction processing"]
                     },
                     {
                       name: "Manufacturing",
-                      icon: "🏭",
+                      icon: <Factory className="w-6 h-6 text-white" />,
                       description: "Production optimization, supply chain management, quality control systems, and industrial IoT solutions.",
                       features: ["Production line monitoring", "Inventory optimization", "Quality assurance automation"]
                     },
                     {
                       name: "Professional Services",
-                      icon: "💼",
+                      icon: <Briefcase className="w-6 h-6 text-white" />,
                       description: "Client management platforms, project tracking systems, automated billing, and resource optimization tools.",
                       features: ["Client relationship management", "Project lifecycle tracking", "Automated invoicing"]
                     },
                     {
                       name: "E-commerce & Retail",
-                      icon: "🛒",
+                      icon: <ShoppingCart className="w-6 h-6 text-white" />,
                       description: "Customer analytics platforms, inventory management, personalization engines, and omnichannel retail solutions.",
                       features: ["Customer behavior analytics", "Dynamic pricing", "Inventory forecasting"]
                     },
                     {
                       name: "Logistics & Supply Chain",
-                      icon: "🚛",
+                      icon: <Truck className="w-6 h-6 text-white" />,
                       description: "Route optimization, fleet management, real-time tracking, and supply chain visibility platforms.",
                       features: ["Real-time fleet tracking", "Route optimization", "Supply chain analytics"]
                     }
@@ -169,7 +164,7 @@ export default function Home() {
                     <GlowBorder key={industry.name} className="rounded-2xl group hover:scale-[1.02] transition-all duration-300" radius="1rem" borderWidth={1}>
                       <div className="p-6 rounded-[calc(1rem-1px)] h-full">
                         <div className="flex items-center gap-3 mb-3">
-                          <span className="text-2xl">{industry.icon}</span>
+                          {industry.icon}
                           <h4 className="text-lg font-semibold text-foreground">{industry.name}</h4>
                         </div>
                         <p className="text-sm text-muted-foreground mb-4 leading-relaxed">
